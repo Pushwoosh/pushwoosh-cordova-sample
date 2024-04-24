@@ -3,7 +3,7 @@
 ## To launch and utilize a sample with Pushwoosh SDK integration, clone or download the repository archive.
 
 ### iOS, Android
- <img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/iOS.png" alt="Alt text" width="300"> <img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/Android.png" alt="Alt text" width="300"> 
+ <img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/iOS.png" alt="Alt text" width="300"> <img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/Android.png" alt="Alt text" width="500"> 
 
 ### 1. Go to 'newdemo' folder and install the package from the command line:
 
@@ -53,11 +53,22 @@ function initPushwoosh() {
 
 ```
 
-### 5. [iOS] If you want to test iOS app badges, open the Xcode project, navigate to the TARGETS tab, and add your App Group name in the App Group section for both targets (newdemo and NotificationService).
+### 5. [iOS] Badges
 
-<img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/xcode_1.png" alt="Alt text" width="300">
+### a. Open the Xcode project, navigate to the TARGETS tab, and add your App Group name in the App Group section for both targets (newdemo and NotificationService).
+
+<img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/xcode_1.png" alt="Alt text" width="500">
+
+### b. Add the App Groups ID to your info.plist for each target of your application:
+
+```
+<key>PW_APP_GROUPS_NAME</key>
+<string>group.com.example.demo</string>
+
+```
 
 ###
+
 
 
 
