@@ -53,6 +53,10 @@ function initPushwoosh() {
 
 ```
 
+### 5. [iOS] If you want to test iOS app badges, open the Xcode project, navigate to the TARGETS tab, and add your App Group name in the App Group section for both targets (newdemo and NotificationService).
+
+<img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/xcode_1.png" alt="Alt text" width="300">
+
 ###
 
 
