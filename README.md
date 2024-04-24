@@ -67,11 +67,11 @@ function initPushwoosh() {
 
 ```
 
-###
-
-
-
-
 ## The guide for SDK integration is available on the Pushwoosh [website](https://docs.pushwoosh.com/platform-docs/pushwoosh-sdk/cross-platform-frameworks/cordova/integrating-cordova-plugin)
 
+Documentation:
+https://github.com/Pushwoosh/pushwoosh-ios-sdk/tree/master/Documentation
+
+Pushwoosh team
+http://www.pushwoosh.com
 
