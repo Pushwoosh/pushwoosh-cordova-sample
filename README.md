@@ -2,11 +2,8 @@
 
 ## To launch and utilize a sample with Pushwoosh SDK integration, clone or download the repository archive.
 
-### iOS
- <img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/iOS.png" alt="Alt text" width="300"> 
-
-### Android 
- <img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/Android.png" alt="Alt text" width="300"> 
+### iOS, Android
+ <img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/iOS.png" alt="Alt text" width="300"> <img src="https://github.com/Pushwoosh/pushwoosh-cordova-sample/blob/main/Screenshots/Android.png" alt="Alt text" width="300"> 
 
 ### 1. Go to 'newdemo' folder and install the package from the command line:
 
@@ -26,11 +23,40 @@ cordova plugin add pushwoosh-cordova-plugin
 * "config.projectid" - GCM project number for android platform
 * "config.serviceName" - MPNS service name for wp8 platform
 */
-    pushwoosh.onDeviceReady({        
-        appid: "XXXXX-XXXXX",
-        projectid: "XXXXXXXXXXXXXXX",
-        serviceName: "XXXX"
-    });
+
+function initPushwoosh() {
+	 var pushwoosh = cordova.require("pushwoosh-cordova-plugin.PushNotification");
+
+//Should be called before pushwoosh.onDeviceReady
+  document.addEventListener('push-notification', function(event) {
+      var notification = event.notification;
+      // handle push open here
+	 });
+
+ pushwoosh.onDeviceReady({        
+   appid: "XXXXX-XXXXX",
+   projectid: "XXXXXXXXXXXXXXX",
+   serviceName: "XXXX"
+ });
+}
 ```
+
+### 3. [Android] Add the 'google-services.json' file to the app folder in Android 
+
+### 4. [Android] Add the following section to your config.xml:
+
+```
+<platform name="android">
+   <resource-file src="google-services.json" target="app/google-services.json" />
+   ...
+</platform>
+
+```
+
+###
+
+
+
+## The guide for SDK integration is available on the Pushwoosh [website](https://docs.pushwoosh.com/platform-docs/pushwoosh-sdk/cross-platform-frameworks/cordova/integrating-cordova-plugin)
 
 
